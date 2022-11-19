@@ -52,7 +52,6 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    console.log('componentDidMount', this.state.contacts);
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
     if (parsedContacts) {
@@ -61,8 +60,6 @@ export class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpda');
-    console.log('componentDidUpda', this.state.contacts, prevState.contacts);
     const { contacts } = this.state;
     if (contacts !== prevState.contacts) {
       localStorage.setItem('contacts', JSON.stringify(contacts));
