@@ -1,6 +1,6 @@
 // import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import {
   InputStyled,
@@ -39,9 +39,6 @@ const initialValues = {
 };
 
 export const FormikContact = () => {
-  const nameInputId = nanoid();
-  const telInputId = nanoid();
-
   const handleSubmit = (values, actions) => {
     actions.resetForm();
   };
